@@ -1,47 +1,56 @@
+import React, { useEffect } from 'react';
 import { ClipboardList, Target, UserRoundCheck } from 'lucide-react';
 import "aos/dist/aos.css";
 import Aos from "aos";
-import { useEffect } from "react";
-import React from 'react'
 
-function Ourgoal (){
-      useEffect(() => {
-      Aos.init({
+function Ourgoal() {
+  useEffect(() => {
+    Aos.init({
       duration: 1000,
       delay: 50,
-      });
-      }, []);
-  return(
-    <div>
-      {/*third div*/}
-<div className='bg-white max-w-[100%] mx-auto max-h-[20%] py-2'>
-  <div className="grid gap-5 grid-cols-12 mx-25 mt-2 mb-5">
-        <div className='col-span-4'>
-          <a href="#">
-            <div className='p-5 rounded-xl bg-gray-200 inline-block text-blue-600 hover:bg-blue-800 hover:text-white'><Target size={30} strokeWidth={1}/></div>
-        <h3 className='text-gray-500 font-semibold mt-4 hover:text-blue-800 text-xl'>At Vero eos</h3>
-        <p className='text-gray-800'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. accusantium? Labore quod ipsum enim quasi,cumque voluptates dolorum!</p>
-          </a>        
-        </div>
+    });
+  }, []);
 
-        <div className='col-span-4'>
-          <a href="#">
-            <div className='p-5 rounded-xl bg-gray-200 text-blue-600 inline-block  hover:bg-blue-800 hover:text-white'><UserRoundCheck size={30} strokeWidth={1}/></div>
-        <h3 className='text-gray-500 font-semibold mt-4 hover:text-blue-800 text-xl'>Sed ut perspitciasis</h3>
-        <p className='text-gray-800'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. ntium accusantium? quod ipsum enim quasi,cumque voluptates dolorum!</p>
-          </a>  
-        </div>
+  return (
+    <div className="bg-white py-12 w-full">
+      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        
+        {/* Goal 1 */}
+        <a href="#" className="flex flex-col items-start p-6 bg-gray-100 rounded-xl group">
+          <div className="p-4 rounded-xl bg-gray-200 group-hover:bg-blue-600 inline-block text-blue-600 group-hover:text-white">
+            <Target size={30} strokeWidth={1} />
+          </div>
+          <h3 className="mt-4 text-xl font-semibold text-gray-500">At Vero eos</h3>
+          <p className="mt-2 text-gray-800">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium? Labore quod ipsum enim quasi, cumque voluptates dolorum!
+          </p>
+        </a>
 
-        <div className='col-span-4'>
-          <a href="#">
-            <div className='p-5 rounded-xl bg-gray-200 text-blue-600 inline-block hover:bg-blue-800 hover:text-white'><ClipboardList size={30} strokeWidth={1}/></div>
-        <h3 className='text-gray-500  font-semibold mt-4 hover:text-blue-800 text-xl'>Nemo enim ipsaum</h3>
-        <p className='text-gray-800'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. ntium accusantium? quod ipsum enim quasi,cumque voluptates dolorum!</p>
-          </a>  
-        </div>
+        {/* Goal 2 */}
+        <a href="#" className="flex flex-col items-start p-6 bg-gray-100 rounded-xl group">
+          <div className="p-4 rounded-xl bg-gray-200 group-hover:bg-blue-600 inline-block text-blue-600 group-hover:text-white">
+            <UserRoundCheck size={30} strokeWidth={1} />
+          </div>
+          <h3 className="mt-4 text-xl font-semibold text-gray-500">Sed ut perspitciasis</h3>
+          <p className="mt-2 text-gray-800">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium? Quod ipsum enim quasi, cumque voluptates dolorum!
+          </p>
+        </a>
+
+        {/* Goal 3 */}
+        <a href="#" className="flex flex-col items-start p-6 bg-gray-100 rounded-xl group">
+          <div className="p-4 rounded-xl bg-gray-200 group-hover:bg-blue-600 inline-block text-blue-600 group-hover:text-white">
+            <ClipboardList size={30} strokeWidth={1} />
+          </div>
+          <h3 className="mt-4 text-xl font-semibold text-gray-500">Nemo enim ipsaum</h3>
+          <p className="mt-2 text-gray-800">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium? Quod ipsum enim quasi, cumque voluptates dolorum!
+          </p>
+        </a>
+
       </div>
-</div>
     </div>
-  )}
+  );
+}
 
-  export default Ourgoal;
+export default Ourgoal;

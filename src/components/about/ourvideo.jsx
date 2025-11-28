@@ -1,38 +1,46 @@
-import { Play } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react';
+import { Play } from 'lucide-react';
 import "aos/dist/aos.css";
 import Aos from "aos";
-import { useEffect } from "react";
 
-function Ourvideo () {
-      useEffect(() => {
-      Aos.init({
+function Ourvideo() {
+  useEffect(() => {
+    Aos.init({
       duration: 1000,
       delay: 50,
-      });
-      }, []);
-  return(
-  <div className='bg-white py-4'>
+    });
+  }, []);
+
+  return (
+    <div className="bg-white py-12 w-full">
       
-{/*video*/}
-{/*<div className='relative'>
-  //<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" >
-  <img src='/images/about-wide-1.webp' alt='Youtube video' className='w-full max-w-[85%] mx-auto h-auto rounded-lg shadow-lg'/></a>
-  <div className='absolute flex items-center justify-center inset-0'>
-    <div className='p-4 rounded-full bg-blue-600 cursor-pointer opacity-80 hover:opacity-100 transition'>
-      <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"><Play size={34} className='text-white' fill="currentColor"/></a>
-    </div>    
-  </div>  
-  </div>*/}
-  <div className='flex flex-col items-center justify-center min-h-screen space-y-8 relative'>
-    <div className='absolute flex items-center justify-center inset-0'>
-      <span className='absolute w-20 h-20 rounded-full bg-blue-600 opacity-75 animate-ping'></span>
-      <span className='absolute w-20 h-20 rounded-full bg-blue-600 opacity-50 animate-ping [animation-delay:8s]'></span>
-      <button className='relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-blue-600 text-white text-3xl shadow-lg'><Play size={34} fill="currentColor"/></button>
+      {/* Video Section */}
+      <div className="relative flex flex-col items-center justify-center space-y-8">
+        
+        {/* Animated Play Button */}
+        <div className="absolute flex items-center justify-center inset-0">
+          <span className="absolute w-18 h-18 rounded-full bg-blue-600 opacity-75 animate-ping"></span>
+          <span className="absolute w-18 h-18 rounded-full bg-blue-600 opacity-50 animate-ping [animation-delay:8s]"></span>
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" target="_blank" rel="noopener noreferrer">
+            <button className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-blue-600 text-white shadow-lg hover:scale-105 transition-transform duration-300">
+              <Play size={34} fill="currentColor" />
+            </button>
+          </a>
+        </div>
+
+        {/* Video Thumbnail */}
+        <div className='px-4'>
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/about-wide-1.webp"
+            alt="Youtube video"
+            className="w-full max-w-7xl mx-auto h-auto rounded-xl shadow-lg"
+          />
+        </a>
+        </div>
+      </div>
     </div>
-    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8">
-  <img src='/images/about-wide-1.webp' alt='Youtube video' className='w-full max-w-[85%] mx-auto h-auto rounded-lg shadow-lg'/></a>
-  </div>
-    </div>
-  )}
-  export default Ourvideo
+  );
+}
+
+export default Ourvideo;

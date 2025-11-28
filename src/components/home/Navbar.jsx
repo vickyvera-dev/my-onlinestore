@@ -1,126 +1,305 @@
 import React from "react";
-import { ChevronDown, Heart, Menu, Search, SearchIcon, ShoppingCart, User, UserIcon, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import { FaHamburger } from "react-icons/fa";
+import {
+  ChevronDown,
+  ChevronRight,
+  Heart,
+  Menu,
+  Search,
+  ShoppingCart,
+  Star,
+  User,
+  X,
+} from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import Megamenu1Section from "./Megamenu1Section";
+import Megamenu2section from "./Megamenu2section";
+
 
 function Navbar() {
-  const [isOpen, setIsOpen] =
-  useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+ 
+   
 
   return (
-    <div className="flex flex-col bg-white">
-      <div className="lg:flex items-center justify-between mx-25 mt-4 py-6 sm:gap-6 bg-white md:hidden sm:hidden hidden">
-        <div>
-          <h1 className="font-bold text-3xl text-blue-950">eStore</h1>
-        </div>
+    <div className="flex flex-col bg-white w-full relative">
+      {/* Desktop Navbar */}
+      <div className="hidden lg:flex items-center justify-between w-full py-6 px-10 gap-6 max-w-7xl">
+        <h1 className="font-bold text-3xl text-blue-950 ml-[8%]">eStore</h1>
 
-        <div className="flex border border-gray-400  rounded-full justify-between p-1 w-1/3 shadow-md">
+        <div className="flex border border-gray-400 rounded-full justify-between p-1 shadow-md flex-1 max-w-lg">
           <input
             type="text"
             placeholder="Search for products"
-            className="outline-none border-none focus:0 focus-border-none ml-5"
+            className="outline-none border-none px-4 flex-1"
           />
-          <div className="flex items-center text-white bg-blue-600 rounded-full px-5 py-2">
+          <div className="flex items-center text-white bg-blue-600 rounded-full px-4 py-2">
             <Search className="w-4 h-4" />
           </div>
         </div>
-        <div className="flex gap-8">
-          <User className="hover:text-blue-600" />
+
+        <div className="flex gap-6">
+          <User className="hover:text-blue-600 cursor-pointer" />
           <div className="relative">
-            <Heart className="hover:text-blue-600" />
-            <span className="flex absolute text-center items-center justify-center bg-blue-600 rounded-full text-white w-5 h-5 text-sm top-[-4px] right-[-0.8rem] mt-[-15px] font-semibold">
+            <Heart className="hover:text-blue-600 cursor-pointer" />
+            <span className="absolute top-[-14px] right-[-1rem] w-5 h-5 text-xs font-semibold flex items-center justify-center text-white bg-blue-600 rounded-full">
               0
             </span>
           </div>
           <div className="relative">
-            <ShoppingCart className="hover:text-blue-600" />
-            <span className="flex absolute text-center items-center justify-center bg-blue-600 rounded-full text-white w-5 h-5 top-[-4px] right-[-0.8rem] mt-[-15px] text-xs font-semibold">
+            <ShoppingCart className="hover:text-blue-600 cursor-pointer" />
+            <span className="absolute top-[-14px] right-[-1rem] w-5 h-5 text-xs font-semibold flex items-center justify-center text-white bg-blue-600 rounded-full">
               3
             </span>
           </div>
         </div>
       </div>
 
-      {/*second navbar*/}
-      <div className="w-full">
-        <ul className="lg:flex items-center justify-between font-medium text-gray-700 hidden border-t border-b py-4 border-gray-300 pl-25 pr-45">
-          <Link to={'/'} className="text-blue-600">Home</Link>
-          <Link to={'/about'} className="hover:text-blue-600">About</Link>
-          <Link to={'/category'} className="hover:text-blue-600">Category</Link>
-          <Link to={'/productDetails'} className="hover:text-blue-600">Product Details</Link>
-          <Link to={'/cart'} className="hover:text-blue-600">Cart</Link>
-          <Link to={'/checkout'} className="hover:text-blue-600">Checkout</Link>
-          <Link to={'/dropdown'}><div className="hover:text-blue-600 flex items-center">
-              <span>Dropdown</span>
-              <ChevronDown className="w-4 h-4" />
-            </div></Link>
+      {/* Desktop Links Full Width */}
+      <div className="hidden lg:flex w-full justify-around font-medium text-gray-700 border-t border-b border-gray-300 py-4 px-10">
+        <div className="max-w-7xl lg:flex w-full justify-around font-medium text-gray-700 items-center">
+          <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                Home
+              </NavLink>
           
-          <Link to={'/megamenu1'}><div className="hover:text-blue-600 flex items-center">
-              <span>Megamenu 1</span>
-              <ChevronDown className="w-4 h-4" />
-          </div></Link>
-          <Link to={'/megamenu2'}>
-           <div className="hover:text-blue-600 flex items-center">
-              <span>Megamenu 2</span>
-              <ChevronDown className="w-4 h-4" />
-            </div>
-          </Link>
-          <Link to={'/contact'} className="hover:text-blue-600">Contact</Link>         
-          </ul>
-      </div>
-
-
-
-      <div className="flex items-center justify-between mt-4 py-6 sm:gap-6 bg-white lg:hidden px-10 border-b border-b-gray-500">
-        <div><h1 className="font-bold text-3xl text-blue-950">eStore</h1></div>
-        <div className="flex items-center gap-8">
-          <div><SearchIcon className="hover:text-blue-600"/></div>
-          <div><UserIcon className="hover:text-blue-600"/></div>
-
-          <div>
-            <div className="relative">
-            <ShoppingCart className="hover:text-blue-600" />
-            <span className="flex absolute text-center items-center justify-center bg-blue-600 rounded-full text-white w-5 h-5 top-[-4px] right-[-0.8rem] mt-[-15px] text-xs font-semibold">
-              3
-            </span>
-          </div></div>
-
-           <div> <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700"> <Menu size={28} className="hover:text-blue-600"/></button>
-            </div>
-            {isOpen && (
-              <div className="flex flex-col items-left justify-items-start space-y-8 text-xl top-2 shadow-lg px-4 py-6  left-0 right-0 h-full fixed w-full z-40 bg-opacity-20 inset-0  bg-black/70 backdrop-md bg-opacity-20">
-                <button onClick={() => setIsOpen(false)} className=" top-28 right-10 absolute z-50"><X size={28}/></button>
-                 <ul className="py-20 px-8 text-left space-y-4 text-2xl text-gray-700 bg-white shadow-lg rounded-lg left-0 right-0 mt-20 relative">
-                <li><Link to={'/'} onClick={() => setIsOpen(false)} className="text-blue-600">Home</Link></li>
-                 <li><Link to={'/about'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">About</Link></li>
-          <li><Link to={'/category'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">Category</Link></li>
-          <li><Link to={'/productDetails'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">Product Details</Link></li>
-          <li><Link to={'/cart'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">Cart</Link></li>
-          <li><Link to={'/checkout'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">Checkout</Link></li>
-          <li> <Link to={'/dropdown'} onClick={() => setIsOpen(false)}><div className="hover:text-blue-600 flex items-center">
-              <span>Dropdown</span>
-              <ChevronDown className="w-4 h-4" />
-            </div></Link></li>
-         <li><Link to={'/megamenu1'} onClick={() => setIsOpen(false)}><div className="hover:text-blue-600 flex items-center">
-              <span>Megamenu 1</span>
-              <ChevronDown className="w-4 h-4" />
-          </div></Link></li>
+           <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                About
+              </NavLink>
           
-          <li><Link to={'/megamenu2'} onClick={() => setIsOpen(false)}>
-           <div className="hover:text-blue-600 flex items-center">
-              <span>Megamenu 2</span>
-              <ChevronDown className="w-4 h-4" />
-            </div>
-          </Link></li>
-          <li> <Link to={'/contact'} onClick={() => setIsOpen(false)} className="hover:text-blue-600">Contact</Link> </li>
-           
+
+           <NavLink
+                to="/category"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                Category
+              </NavLink>
+          
+
+          <NavLink
+                to="/productDetails"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                 Product Details
+              </NavLink>
+          
+           <NavLink
+                to="/cart"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                 Cart
+              </NavLink>
+         
+           <NavLink
+                to="/checkout"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                 Checkout
+              </NavLink>
+          
+          <div className="relative group inline-block">
+            <button className="py-2 rounded ">
+              <a
+                href="#"
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Dropdown <ChevronDown className="w-4 h-4" />
+              </a>
+            </button>
+            <div
+              className="absolute left-0 mt-2 w-52 bg-white shadow-lg rounded opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-100"
+            >
+              <ul className="p-3 space-y-3">
+                <li className="hover:text-blue-600">Dropdown 1</li>
+                <li className="relative group/sub">
+                  <button className="w-full text-left flex items-center gap-1 hover:text-blue-600">
+                    Deepdropdown <ChevronDown className="w-4 h-4" />
+                  </button>
+                  <div
+                    className="absolute top-0 right-full mr-2 w-52 bg-white shadow-lg rounded opacity-0 invisible
+                 group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300  z-100"
+                  >
+                    <ul className="p-3 space-y-3">
+                      <li className="hover:text-blue-600">Deepdropdown 1</li>
+                      <li className="hover:text-blue-600">Deepdropdown 2</li>
+                      <li className="hover:text-blue-600">Deepdropdown 3</li>
+                      <li className="hover:text-blue-600">Deepdropdown 4</li>
+                      <li className="hover:text-blue-600">Deepdropdown 5</li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-blue-600">Dropdown 2</li>
+                <li className="hover:text-blue-600">Dropdown 3</li>
+                <li className="hover:text-blue-600">Dropdown 4</li>
               </ul>
-              </div>             
-            )}
+            </div>
+          </div>
+
+         
+          {/* === MEGAMENU 1 (FULL WIDTH DROPDOWN) === */}
+          <div className="relative group inline-block">
+            <button className="py-2">
+              <a
+                href="#"
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Megamenu 1 <ChevronDown className="w-4 h-4" />
+              </a>
+            </button>
+
+            {/* FULL PAGE WIDTH DROPDOWN */}
+           <div>
+            <Megamenu1Section/>
+           </div>
+          </div>
+
+           {/* === MEGAMENU 2 (FULL WIDTH DROPDOWN) === */}
+          <div className="relative group inline-block">
+            <button className="py-2">
+              <a
+                href="#"
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Megamenu 2 <ChevronDown className="w-4 h-4" />
+              </a>
+            </button>
+
+            {/* FULL PAGE WIDTH DROPDOWN */}
+            <div>
+              <Megamenu2section/>
+            </div>
+          </div>
+        
+          
+          <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                 Contact
+              </NavLink>
         </div>
       </div>
 
+      {/* Mobile Navbar */}
+      <div className="flex items-center justify-between lg:hidden px-4 py-4 border-b border-gray-300">
+        <h1 className="font-bold text-3xl text-blue-950">eStore</h1>
+        <div className="flex items-center gap-4">
+          <Search className="hover:text-blue-600 cursor-pointer" />
+          <User className="hover:text-blue-600 cursor-pointer" />
+          <div className="relative">
+            <ShoppingCart className="hover:text-blue-600 cursor-pointer" />
+            <span className="absolute top-[-14px] right-[-1rem] w-5 h-5 text-xs font-semibold flex items-center justify-center text-white bg-blue-600 rounded-full">
+              3
+            </span>
+          </div>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <Menu size={28} className="hover:text-blue-600" />
+          </button>
+        </div>
+
+        {isOpen && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex justify-start items-start">
+            <div className="bg-white w-3/4 h-full px-6 py-8 relative shadow-lg flex flex-col gap-6">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute top-4 right-4"
+              >
+                <X size={28} />
+              </button>
+              <Link
+                to="/"
+                onClick={() => setIsOpen(false)}
+                className="text-blue-600"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                About
+              </Link>
+              <Link
+                to="/category"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                Category
+              </Link>
+              <Link
+                to="/productDetails"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                Product Details
+              </Link>
+              <Link
+                to="/cart"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                Cart
+              </Link>
+              <Link
+                to="/checkout"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                Checkout
+              </Link>
+              <a
+                href="#"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Dropdown <ChevronDown className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Megamenu 1 <ChevronDown className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600 flex items-center gap-1"
+              >
+                Megamenu 2 <ChevronDown className="w-4 h-4" />
+              </a>
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="hover:text-blue-600"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import Checkouts from '../components/checkout/Checkouts'
 
  function Checkout() {
   return (
-    <div>Checkout</div>
+    <div>
+      <Checkouts/>
+    </div>
   )
 }
 

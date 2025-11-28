@@ -1,12 +1,9 @@
+import React, { useEffect } from "react";
 import { Headset, Percent, Truck } from "lucide-react";
 import { BsPiggyBank } from "react-icons/bs";
-import "aos/dist/aos.css";
 import Aos from "aos";
-import { useEffect } from "react";
+import "aos/dist/aos.css";
 
-{
-  /*Arrow function*/
-}
 function Serviceweoffer() {
   useEffect(() => {
     Aos.init({
@@ -14,57 +11,68 @@ function Serviceweoffer() {
       delay: 50,
     });
   }, []);
+
   return (
-  <div className="bg-gray-100 w-full">
-    <div className="grid grid-cols-12 mx-25 gap-5 py-4">
-      <div data-aos="zoom-in" className="col-span-12 md:col-span-6 lg:col-span-3 p-3 text-gray-600 transition-transform duration-300 ease-in-out hover:-translate-y-2">
-      <div className="transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col items-center">
-        <Truck className="hover:text-blue-600 my-5" size={36}/>
-        <h2 className="text-xl mb-3">Free Shipping</h2>
-        <p className="text-center">
-          Nulla sit morbi vestibulum eros duis amet, consectetur vitae lacus.
-          Ut quis tempor felis sed nunc viverra
-        </p>
-        </div>          
-        </div>
-
-        {/*second div*/}
-        <div data-aos="zoom-in" className="col-span-12 md:col-span-6 lg:col-span-3 p-3 text-gray-600 transition-transform duration-300 ease-in-out hover:-translate-y-2">
-          <div className="transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col items-center">
-            
-            <BsPiggyBank className="hover:text-blue-600 my-5" size={36}/>
-          <h2 className="text-xl mb-3">Money Back Guarantee</h2>
-          <p className="text-center">
-            Nullam gravida felis nunc tincidunt, sed malesuada justo
-            pulvinar. Vestibulum nec diam vitae eros.
+    <div className="bg-gray-100 w-full py-16">
+      {/* Container */}
+      <div
+        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6"
+        style={{ fontFamily: '"Poppins", sans-serif' }}
+      >
+        {/* Free Shipping */}
+        <div
+          data-aos="zoom-in"
+          className="p-6 rounded-xl text-gray-600 text-center  transition-transform ease-in-out duration-300 hover:-translate-y-2 group"
+        >
+          <Truck className="group-hover:text-blue-800 text-gray-800 mx-auto mb-5" size={40} />
+          <h2 className="text-lg font-semibold mb-3 text-blue-950">Free Shipping</h2>
+          <p>
+            Nulla sit morbi vestibulum eros duis amet, consectetur vitae lacus. 
+            Ut quis tempor felis sed nunc viverra.
           </p>
-          </div>          
         </div>
 
-        {/*third div*/}
-        <div data-aos="zoom-in" className="col-span-12 md:col-span-6 lg:col-span-3 p-3 text-gray-600 transition-transform duration-300 ease-in-out hover:-translate-y-2">
-          <div className="transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col items-center">
-            <Percent className="hover:text-blue-600 my-5" size={36}/>
-          <h2 className="text-xl mb-3">Discount Offers</h2>
-          <p className="text-center">
-            Nulla ipsum nisi vel adipiscing amet, dignissim consectetur ornare.
+        {/* Money Back Guarantee */}
+        <div
+          data-aos="zoom-in"
+          className="p-6 rounded-xl text-gray-600 text-center  transition-transform ease-in-out duration-300 hover:-translate-y-2 group"
+        >
+          <BsPiggyBank className="group-hover:text-blue-800 text-gray-800 mx-auto mb-5" size={40} />
+          <h2 className="text-lg font-semibold mb-3 text-blue-950">Money Back Guarantee</h2>
+          <p>
+            Nullam gravida felis nunc tincidunt, sed malesuada justo pulvinar. 
+            Vestibulum nec diam vitae eros.
+          </p>
+        </div>
+
+        {/* Discount Offers */}
+        <div
+          data-aos="zoom-in"
+          className=" p-6 rounded-xl text-gray-600 text-center transition-transform duration-300 ease-in-out group hover:-translate-y-2"
+        >
+          <Percent className="group-hover:text-blue-800 text-gray-800 mx-auto mb-5" size={40} />
+          <h2 className="text-lg font-semibold mb-3 text-blue-950">Discount Offers</h2>
+          <p>
+            Nulla ipsum nisi vel adipiscing amet, dignissim consectetur ornare. 
             Vestibulum quis posuere elit auctor.
           </p>
-          </div>          
         </div>
-        {/*fourth div*/}
-        <div data-aos="zoom-in" className="col-span-12 md:col-span-6 lg:col-span-3 p-3 text-gray-600 hover:-translate-y-2 transition-transform duration-300 ease-in-out">
-          <div className="hover:-translate-y-2 transition-transform duration-300 ease-in-out flex flex-col items-center">
-            <Headset className="hover:text-blue-600 my-5" size={36} />
-          <h2 className="text-xl mb-3">24/7 Support</h2>
-          <p className="text-center">
-            Ipsum dolor amet sit consectetur adipiscing, nullam vitae euismod
+
+        {/* 24/7 Support */}
+        <div
+          data-aos="zoom-in"
+          className="p-6 rounded-xl text-gray-600 text-center  transition-all duration-300 ease-in-out group hover:-translate-y-2"
+        >
+          <Headset className="group-hover:text-blue-800 text-gray-800 mx-auto mb-5" size={40} />
+          <h2 className="text-lg font-semibold mb-3 text-blue-950">24/7 Support</h2>
+          <p>
+            Ipsum dolor amet sit consectetur adipiscing, nullam vitae euismod 
             tempor nunc felis vestibulum ornare.
           </p>
-          </div>          
         </div>
       </div>
     </div>
   );
-};
+}
+
 export default Serviceweoffer;

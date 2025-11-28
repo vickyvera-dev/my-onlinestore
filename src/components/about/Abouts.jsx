@@ -1,5 +1,5 @@
 import React from 'react'
-import Aboutnav from './Aboutnav'
+
 import OurHistory from './OurHistory'
 import Ourdetails from './Ourdetails'
 import Testimonials from './Testimonials'
@@ -8,13 +8,14 @@ import Ourvideo from './ourvideo'
 import Emailsectn from '../home/Emailsectn'
 import Infosec from '../home/Infosec'
 import Footer from '../home/Footer'
+import Navbar from '../home/Navbar'
 
 
 
 
 function Abouts() {
   return (
-    <div><Aboutnav/>
+    <div><Navbar/>
     <OurHistory/>
     <Ourgoal/>    
     <Ourvideo/>

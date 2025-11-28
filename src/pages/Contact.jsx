@@ -1,8 +1,11 @@
 import React from 'react'
+import Contactarrangement from '../components/contact/Contactarrangement'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <Contactarrangement/>
+    </div>
   )
 }
 

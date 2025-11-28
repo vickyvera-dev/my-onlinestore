@@ -6,9 +6,7 @@ import Cart from '../pages/Cart'
 import Category from '../pages/Category'
 import Checkout from '../pages/Checkout'
 import Contact from '../pages/Contact'
-import Dropdown from '../pages/Dropdown'
-import Megamenu1 from '../pages/Megamenu1'
-import Megamenu2 from '../pages/Megamenu2'
+
 import ProductDetails from '../pages/ProductDetails'
 
 
@@ -22,9 +20,7 @@ import ProductDetails from '../pages/ProductDetails'
       <Route path="/category" element={<Category/>}/>
       <Route path="/checkout" element={<Checkout/>}/>
       <Route path="/contact" element={<Contact/>}/>
-      <Route path="dropdown" element={<Dropdown/>}/>
-      <Route path="megamenu1" element={<Megamenu1/>}/>
-      <Route path="megamenu2" element={<Megamenu2/>}/>
+     
       <Route path="productdetails" element={<ProductDetails/>}/>
     </Routes>
     </BrowserRouter>
