@@ -6,11 +6,8 @@ import {
   BsArrowRepeat,
   BsCartPlus,
   BsCheck,
-  BsCreditCard,
-  BsCreditCard2Front,
   BsFillLightningFill,
   BsHeart,
-  BsQuestionCircle,
   BsShieldPlus,
   BsStarHalf,
   BsTruck,
@@ -99,11 +96,17 @@ export default function ProductPage() {
       {/* Breadcrumb */}
       <div className="bg-gray-50 w-full">
         <div className="bg-gray-100 py-4 w-full">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <h1 className="font-bold text-2xl text-blue-900">Product Details</h1>
-            <div className="flex gap-2 text-sm">
-              <Link to="/" className="text-blue-600 font-medium">Home</Link>
-              <span className="text-gray-500 font-medium">/ Productdetails</span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex lg:flex-row flex-col justify-between lg:items-center">
+            <h1 className="font-bold text-2xl text-blue-900">
+              Product Details
+            </h1>
+            <div className="flex gap-2 text-sm flex-row items-center">
+              <Link to="/" className="text-blue-600 font-medium">
+                Home
+              </Link>
+              <span className="text-gray-500 font-medium flex flex-row items-center gap-2">
+                <span>/</span> Productdetails
+              </span>
             </div>
           </div>
         </div>
@@ -143,7 +146,9 @@ export default function ProductPage() {
                 <img
                   src="/images/product-details-1.webp"
                   alt="thumb1"
-                  onClick={() => changeImage("/images/product-details-1.webp", 0)}
+                  onClick={() =>
+                    changeImage("/images/product-details-1.webp", 0)
+                  }
                   className={`w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-md cursor-pointer border ${
                     mainImage === "/images/product-details-1.webp"
                       ? "border-blue-500 border-2"
@@ -155,7 +160,9 @@ export default function ProductPage() {
                 <img
                   src="/images/product-details-2.webp"
                   alt="thumb2"
-                  onClick={() => changeImage("/images/product-details-2.webp", 1)}
+                  onClick={() =>
+                    changeImage("/images/product-details-2.webp", 1)
+                  }
                   className={`w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-md cursor-pointer border ${
                     mainImage === "/images/product-details-2.webp"
                       ? "border-blue-500 border-2"
@@ -167,7 +174,9 @@ export default function ProductPage() {
                 <img
                   src="/images/product-details-3.webp"
                   alt="thumb3"
-                  onClick={() => changeImage("/images/product-details-3.webp", 2)}
+                  onClick={() =>
+                    changeImage("/images/product-details-3.webp", 2)
+                  }
                   className={`w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-md cursor-pointer border ${
                     mainImage === "/images/product-details-3.webp"
                       ? "border-blue-500 border-2"
@@ -179,7 +188,9 @@ export default function ProductPage() {
                 <img
                   src="/images/product-details-4 (1).webp"
                   alt="thumb4"
-                  onClick={() => changeImage("/images/product-details-4 (1).webp", 3)}
+                  onClick={() =>
+                    changeImage("/images/product-details-4 (1).webp", 3)
+                  }
                   className={`w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-md cursor-pointer border ${
                     mainImage === "/images/product-details-4 (1).webp"
                       ? "border-blue-500 border-2"
@@ -191,7 +202,9 @@ export default function ProductPage() {
                 <img
                   src="/images/product-details-5.webp"
                   alt="thumb5"
-                  onClick={() => changeImage("/images/product-details-5.webp", 4)}
+                  onClick={() =>
+                    changeImage("/images/product-details-5.webp", 4)
+                  }
                   className={`w-28 sm:w-36 h-28 sm:h-36 object-cover rounded-md cursor-pointer border ${
                     mainImage === "/images/product-details-5.webp"
                       ? "border-blue-500 border-2"
@@ -203,7 +216,8 @@ export default function ProductPage() {
               <button
                 onClick={scrollRight}
                 aria-label="scroll right"
-                className="absolute right-1 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-sm hidden sm:inline-flex"              >
+                className="absolute right-1 top-1/2 -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow-sm hidden sm:inline-flex"
+              >
                 <ChevronRight size={20} />
               </button>
             </div>
@@ -219,7 +233,7 @@ export default function ProductPage() {
                 </h2>
               </div>
 
-                 <div className="flex gap-2">
+              <div className="flex gap-2">
                 <div className="flex gap-1">
                   <Star size={16} className="text-yellow-400 fill-yellow-400" />
                   <Star size={16} className="text-yellow-400 fill-yellow-400" />
@@ -232,13 +246,19 @@ export default function ProductPage() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="text-3xl text-blue-900 font-semibold">$249.99</div>
+              <div className="text-3xl text-blue-900 font-semibold">
+                $249.99
+              </div>
               <div className="text-gray-400 line-through">$299.99</div>
-              <div className="bg-red-600 text-white text-xs px-2 py-1 rounded">-17%</div>
+              <div className="bg-red-600 text-white text-xs px-2 py-1 rounded">
+                -17%
+              </div>
             </div>
 
             <p className="text-gray-500 text-lg">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci. Phasellus egestas nisi vitae lectus imperdiet venenatis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.
+              Phasellus egestas nisi vitae lectus imperdiet venenatis.
             </p>
 
             <div className="flex items-center gap-3">
@@ -266,9 +286,15 @@ export default function ProductPage() {
             <div className="flex flex-col gap-2">
               <span className="font-medium">Size:</span>
               <div className="flex items-center gap-3">
-                <button className="px-3 py-2 border border-gray-400 hover:border-blue-700 rounded">S</button>
-                <button className="px-3 py-2 bg-blue-600 text-white rounded">M</button>
-                <button className="px-3 py-2 border border-gray-400 hover:border-blue-700 rounded">L</button>
+                <button className="px-3 py-2 border border-gray-400 hover:border-blue-700 rounded">
+                  S
+                </button>
+                <button className="px-3 py-2 bg-blue-600 text-white rounded">
+                  M
+                </button>
+                <button className="px-3 py-2 border border-gray-400 hover:border-blue-700 rounded">
+                  L
+                </button>
               </div>
             </div>
 
@@ -277,22 +303,26 @@ export default function ProductPage() {
               <span className="font-medium">Quantity:</span>
               <div>
                 <div className="inline-flex items-center border rounded">
-                <button
-                  onClick={decreaseQty}
-                  disabled={quantity === 1}
-                  className={`px-4 py-2 ${quantity === 1 ? "opacity-40 cursor-not-allowed" : ""}`}
-                >
-                  -
-                </button>
-                <div className="px-6 py-2 border-l border-r">{quantity}</div>
-                <button
-                  onClick={increaseQty}
-                  disabled={quantity === 24}
-                  className={`px-4 py-2 ${quantity === 24 ? "opacity-40 cursor-not-allowed" : ""}`}
-                >
-                  +
-                </button>
-              </div>
+                  <button
+                    onClick={decreaseQty}
+                    disabled={quantity === 1}
+                    className={`px-4 py-2 ${
+                      quantity === 1 ? "opacity-40 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    -
+                  </button>
+                  <div className="px-6 py-2 border-l border-r">{quantity}</div>
+                  <button
+                    onClick={increaseQty}
+                    disabled={quantity === 24}
+                    className={`px-4 py-2 ${
+                      quantity === 24 ? "opacity-40 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -316,13 +346,16 @@ export default function ProductPage() {
             {/* Shipping & policies */}
             <div className="flex flex-col gap-3 mt-4 text-gray-600">
               <div className="flex items-center gap-3">
-                <BsTruck className="text-blue-600" /> <span>Free shipping on orders over $50</span>
+                <BsTruck className="text-blue-600" />{" "}
+                <span>Free shipping on orders over $50</span>
               </div>
               <div className="flex items-center gap-3">
-                <BsArrowRepeat className="text-blue-600" /> <span>30-day return policy</span>
+                <BsArrowRepeat className="text-blue-600" />{" "}
+                <span>30-day return policy</span>
               </div>
               <div className="flex items-center gap-3">
-                <BsShieldPlus className="text-blue-600" /> <span>2-year warranty</span>
+                <BsShieldPlus className="text-blue-600" />{" "}
+                <span>2-year warranty</span>
               </div>
             </div>
           </div>
@@ -336,21 +369,33 @@ export default function ProductPage() {
           <div className="flex gap-6 flex-wrap border-b border-b-gray-300">
             <button
               onClick={() => setActiveSection("Description")}
-              className={`pb-4 text-lg font-medium ${activeSection === "Description" ? "text-blue-900 border-b-2 border-blue-600 " : "text-gray-600 hover:text-blue-600"}`}
+              className={`pb-4 text-lg font-medium ${
+                activeSection === "Description"
+                  ? "text-blue-900 border-b-2 border-blue-600 "
+                  : "text-gray-600 hover:text-blue-600"
+              }`}
             >
               Description
             </button>
 
             <button
               onClick={() => setActiveSection("Spacifications")}
-              className={`pb-4 text-lg font-medium ${activeSection === "Spacifications" ? "text-blue-900 border-b-2 border-blue-600" : "text-gray-600 hover:text-blue-600"}`}
+              className={`pb-4 text-lg font-medium ${
+                activeSection === "Spacifications"
+                  ? "text-blue-900 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
+              }`}
             >
               Spacifications
             </button>
 
             <button
               onClick={() => setActiveSection("Reviews (42)")}
-              className={`pb-4 text-lg font-medium ${activeSection === "Reviews (42)" ? "text-blue-900 border-b-2 border-blue-600" : "text-gray-600 hover:text-blue-600"}`}
+              className={`pb-4 text-lg font-medium ${
+                activeSection === "Reviews (42)"
+                  ? "text-blue-900 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:text-blue-600"
+              }`}
             >
               Reviews (42)
             </button>
@@ -362,45 +407,104 @@ export default function ProductPage() {
             {activeSection === "Description" && (
               <div>
                 <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium text-blue-900">Product Overview</h3>
-                  <p className="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci. Phasellus egestas nisi vitae lectus imperdiet venenatis. Suspendisse vulputate quam diam, et consectetur augue condimentum in. Aenean dapibus urna eget nisi pharetra, in iaculis nulla blandit. Praesent at consectetur sem, sed sollicitudin nibh. Ut interdum risus ac nulla placerat aliquet.</p>
-                </div>
+                  <div>
+                    <h3 className="text-lg font-medium text-blue-900">
+                      Product Overview
+                    </h3>
+                    <p className="text-gray-600 mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Vestibulum at lacus congue, suscipit elit nec, tincidunt
+                      orci. Phasellus egestas nisi vitae lectus imperdiet
+                      venenatis. Suspendisse vulputate quam diam, et consectetur
+                      augue condimentum in. Aenean dapibus urna eget nisi
+                      pharetra, in iaculis nulla blandit. Praesent at
+                      consectetur sem, sed sollicitudin nibh. Ut interdum risus
+                      ac nulla placerat aliquet.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-medium text-blue-900">Key Features</h3>
-                  <div className="mt-3 space-y-2">
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></p>
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Vestibulum at lacus congue, suscipit elit nec, tincidunt orci</span></p>
+                  <div>
+                    <h3 className="text-lg font-medium text-blue-900">
+                      Key Features
+                    </h3>
+                    <div className="mt-3 space-y-2">
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit
+                        </span>
+                      </p>
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Vestibulum at lacus congue, suscipit elit nec,
+                          tincidunt orci
+                        </span>
+                      </p>
 
-                    <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Phasellus egestas nisi vitae lectus imperdiet venenatis</span></p>
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Phasellus egestas nisi vitae lectus imperdiet
+                          venenatis
+                        </span>
+                      </p>
 
-                    <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Suspendisse vulputate quam diam, et consectetur augue condimentum in</span></p>
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Suspendisse vulputate quam diam, et consectetur augue
+                          condimentum in
+                        </span>
+                      </p>
 
-                     <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Aenean dapibus urna eget nisi pharetra, in iaculis nulla blandit</span></p>
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Aenean dapibus urna eget nisi pharetra, in iaculis
+                          nulla blandit
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-blue-900">
+                      What's in the Box
+                    </h3>
+                    <div className="mt-3 space-y-2">
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          Lorem Ipsum Wireless Headphones
+                        </span>
+                      </p>
+
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">Carrying Case</span>
+                      </p>
+
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">
+                          USB-C Charging Cable
+                        </span>
+                      </p>
+
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">3.5mm Audio Cable</span>
+                      </p>
+
+                      <p className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <span className="text-gray-600">User Manual</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-medium text-blue-900">What's in the Box</h3>
-                  <div className="mt-3 space-y-2">
-                    <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Lorem Ipsum Wireless Headphones</span></p>
-
-                    <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">Carrying Case</span></p>
-
-                    <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">USB-C Charging Cable</span></p>
-
-                     <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">3.5mm Audio Cable</span></p>
-
-                      <p className="flex items-start gap-3"><span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span><span className="text-gray-600">User Manual</span></p>
-                  </div>
-                </div>
-              </div>
-
-              
               </div>
             )}
 
@@ -408,96 +512,144 @@ export default function ProductPage() {
             {activeSection === "Spacifications" && (
               <div>
                 <div>
-                  <h3 className="text-lg font-medium text-blue-900 mb-4">Technical Specifications</h3>
+                  <h3 className="text-lg font-medium text-blue-900 mb-4">
+                    Technical Specifications
+                  </h3>
                   <div className="overflow-x-auto">
-                  <table className="w-full  rounded-lg">
-                    <tbody className="divide-y divide-gray-200">
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700 sm:w-1/3">Connectivity</td>
-                        <td className="p-3 text-gray-600">Bluetooth 5.0, 3.5mm jack</td>
-                      </tr>
+                    <table className="w-full  rounded-lg">
+                      <tbody className="divide-y divide-gray-200">
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700 sm:w-1/3">
+                            Connectivity
+                          </td>
+                          <td className="p-3 text-gray-600">
+                            Bluetooth 5.0, 3.5mm jack
+                          </td>
+                        </tr>
 
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Battery Life</td>
-                        <td className="p-3 text-gray-600">Up to 30 hours</td>
-                      </tr>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Battery Life
+                          </td>
+                          <td className="p-3 text-gray-600">Up to 30 hours</td>
+                        </tr>
 
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Charging Time</td>
-                        <td className="p-3 text-gray-600">3 hours</td>
-                      </tr>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Charging Time
+                          </td>
+                          <td className="p-3 text-gray-600">3 hours</td>
+                        </tr>
 
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Driver Size</td>
-                        <td className="p-3 text-gray-600">40mm</td>
-                      </tr>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Driver Size
+                          </td>
+                          <td className="p-3 text-gray-600">40mm</td>
+                        </tr>
 
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Frequency Response</td>
-                        <td className="p-3 text-gray-600">20Hz - 20kHz</td>
-                      </tr>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Frequency Response
+                          </td>
+                          <td className="p-3 text-gray-600">20Hz - 20kHz</td>
+                        </tr>
 
-                       <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Impedance</td>
-                        <td className="p-3 text-gray-600">32 Ohm</td>
-                      </tr>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Impedance
+                          </td>
+                          <td className="p-3 text-gray-600">32 Ohm</td>
+                        </tr>
 
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Weight</td>
-                        <td className="p-3 text-gray-600">320g</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        <tr className="flex flex-col sm:table-row">
+                          <td className="p-3 font-medium text-gray-700">
+                            Weight
+                          </td>
+                          <td className="p-3 text-gray-600">320g</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-blue-900 mb-2 mt-4">
+                      Features
+                    </h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full  rounded-lg">
+                        <tbody className="divide-y divide-gray-200">
+                          <tr className="flex flex-col sm:table-row">
+                            <td className="p-3 font-medium text-gray-700 sm:w-1/3">
+                              Noise Cancellation
+                            </td>
+                            <td className="p-3 text-gray-600">
+                              Active Noise Cancellation (ANC)
+                            </td>
+                          </tr>
+
+                          <tr className="flex flex-col sm:table-row">
+                            <td className="p-3 font-medium text-gray-700">
+                              Controls
+                            </td>
+                            <td className="p-3 text-gray-600">
+                              Touch controls, Voice assistant
+                            </td>
+                          </tr>
+
+                          <tr className="flex flex-col sm:table-row">
+                            <td className="p-3 font-medium text-gray-700">
+                              Microphone
+                            </td>
+                            <td className="p-3 text-gray-600">
+                              Dual beamforming microphones
+                            </td>
+                          </tr>
+
+                          <tr className="flex flex-col sm:table-row">
+                            <td className="p-3 font-medium text-gray-700">
+                              Water Resistance
+                            </td>
+                            <td className="p-3 text-gray-600">
+                              IPX4 (splash resistant)
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-                     
-                <div>
-                  <h3 className="text-lg font-medium text-blue-900 mb-2 mt-4">Features</h3>
-                  <div className="overflow-x-auto">
-                  <table className="w-full  rounded-lg">
-                    <tbody className="divide-y divide-gray-200">
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700 sm:w-1/3">Noise Cancellation</td>
-                        <td className="p-3 text-gray-600">Active Noise Cancellation (ANC)</td>
-                      </tr>
-
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Controls</td>
-                        <td className="p-3 text-gray-600">Touch controls, Voice assistant</td>
-                      </tr>
-
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Microphone</td>
-                        <td className="p-3 text-gray-600">Dual beamforming microphones</td>
-                      </tr>
-
-                      <tr className="flex flex-col sm:table-row">
-                        <td className="p-3 font-medium text-gray-700">Water Resistance</td>
-                        <td className="p-3 text-gray-600">IPX4 (splash resistant)</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-                </div>
-
-                </div>   
-              </div>              
+              </div>
             )}
 
             {/* REVIEWS */}
             {activeSection === "Reviews (42)" && (
-              <div className="space-y-6 px-4">
+              <div className="space-y-6">
                 <div className="flex flex-col lg:flex-row md:flex-row gap-18 items-center w-full">
                   <div className="flex flex-col items-center space-y-2">
                     <div className="text-5xl font-bold text-blue-900">4.5</div>
-                     <div className="flex gap-1 mt-1">
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
+                    <div className="flex gap-1 mt-1">
+                      <Star
+                        className="text-yellow-400 fill-amber-400"
+                        size={16}
+                      />
+                      <Star
+                        className="text-yellow-400 fill-amber-400"
+                        size={16}
+                      />
+                      <Star
+                        className="text-yellow-400 fill-amber-400"
+                        size={16}
+                      />
+                      <Star
+                        className="text-yellow-400 fill-amber-400"
+                        size={16}
+                      />
                       <BsStarHalf className="text-yellow-400" size={16} />
                     </div>
-                    <div className="text-sm text-gray-600 mt-1">Based on 42 reviews</div>
+                    <div className="text-sm text-gray-600 mt-1">
+                      Based on 42 reviews
+                    </div>
                   </div>
 
                   <div className="flex-1 space-y-2 w-full">
@@ -544,151 +696,260 @@ export default function ProductPage() {
                 </div>
 
                 {/* review form */}
-                <form className="space-y-4 shadow-lg rounded-lg bg-white p-8">
-                  <h1 className="text-lg font-bold text-gray-600">Write a Review</h1>
-                  <div>
-                    <p className="text-sm text-gray-700">Your Rating</p>
-                    <div className="flex gap-1 mt-1">
-                      <Star className="text-gray-400 fill-gray-400" size={20} />
-                      <Star className="text-gray-400 fill-gray-400" size={20} />
-                      <Star className="text-gray-400 fill-gray-400" size={20} />
-                      <Star className="text-gray-400 fill-gray-400" size={20} />
-                       <Star className="text-gray-400 fill-gray-400" size={20} />
-                    </div>
-                  </div>
-                  <div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <form className="space-y-4 shadow-lg rounded-lg bg-white p-8">
+                    <h1 className="text-lg font-bold text-gray-600">
+                      Write a Review
+                    </h1>
                     <div>
-                      <label className="block text-sm text-gray-700 mb-1 font-bold">Your Name</label>
-                      <input className="w-full border border-gray-300 px-4 py-2 rounded" required />
+                      <p className="text-sm text-gray-700">Your Rating</p>
+                      <div className="flex gap-1 mt-1">
+                        <Star
+                          className="text-gray-400 fill-gray-400"
+                          size={20}
+                        />
+                        <Star
+                          className="text-gray-400 fill-gray-400"
+                          size={20}
+                        />
+                        <Star
+                          className="text-gray-400 fill-gray-400"
+                          size={20}
+                        />
+                        <Star
+                          className="text-gray-400 fill-gray-400"
+                          size={20}
+                        />
+                        <Star
+                          className="text-gray-400 fill-gray-400"
+                          size={20}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm text-gray-700 mb-1 font-bold">
+                            Your Name
+                          </label>
+                          <input
+                            className="w-full border border-gray-300 px-4 py-2 rounded"
+                            required
+                          />
+                        </div>
+
+                        <div className="relative">
+                          <label className="block text-sm text-gray-700 mb-1 font-bold">
+                            Your Email
+                          </label>
+                          <input className="w-full border border-gray-300 px-4 py-2 rounded" />
+                          <button
+                            type="button"
+                            onClick={() => setShowCvvHelp((s) => !s)}
+                            className="absolute right-3 bottom-3 text-gray-500"
+                            aria-label="CVV help"
+                          ></button>
+
+                          {showCvvHelp && (
+                            <div className="mt-2 text-xs text-gray-600">
+                              The CVV is the 3-digit code on the back of your
+                              card.
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <label className="block text-md mt-4 text-gray-700 mb-1 font-bold">
+                        Review Title
+                      </label>
+                      <input
+                        className="w-full border border-gray-300 px-4 py-2 rounded"
+                        type="text"
+                      />
                     </div>
 
-                    <div className="relative">
-                      <label className="block text-sm text-gray-700 mb-1 font-bold">Your Email</label>
-                      <input className="w-full border border-gray-300 px-4 py-2 rounded"/>
-                      <button
-                        type="button"
-                        onClick={() => setShowCvvHelp((s) => !s)}
-                        className="absolute right-3 bottom-3 text-gray-500"
-                        aria-label="CVV help"
-                      >
-                        
+                    <div className="w-full">
+                      <label className="block text-md font-bold text-gray-700 mb-1">
+                        Your Review
+                      </label>
+                      <textarea
+                        rows="4"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-500 focus:shadow-md focus:shadow-blue-300 focus:outline-none"
+                      ></textarea>
+                      <p className="py-3 text-sm text-gray-400">
+                        Tell others what you think about this product. Be honest
+                        and helpful!
+                      </p>
+
+                      <button className="w-full border border-gray-300 px-4 py-3 font-medium rounded bg-blue-600 text-white">
+                        Submit Review
                       </button>
-
-                      {showCvvHelp && (
-                        <div className="mt-2 text-xs text-gray-600">The CVV is the 3-digit code on the back of your card.</div>
-                      )}
                     </div>
-
-                  </div>
-                    <label className="block text-md mt-4 text-gray-700 mb-1 font-bold">Review Title</label>
-                    <input className="w-full border border-gray-300 px-4 py-2 rounded" type="text" />
-                  </div>
-
-                  
-
-                  <div>
-                    <label className="block text-md font-bold text-gray-700 mb-1">Your Review</label>
-                    <textarea              
-              rows="4"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-500 focus:shadow-md focus:shadow-blue-300 focus:outline-none"
-            ></textarea>
-            <p className="py-3 text-sm text-gray-400">Tell others what you think about this product. Be honest and helpful!</p>
-
-            <button  className="w-full border border-gray-300 px-4 py-3 font-medium rounded bg-blue-600 text-white" >Submit Review</button>
-                  </div>
-                </form>
-            
-              <div className="flex flex-col gap-6">
-                <h1 className="text-lg text-gray-700">Customer Reviews</h1>
-                <div className="bg-white shadow p-8 rounded-lg">
-                  <div className="flex gap-4 items-center justify-between">
-                    <div className="flex flex-row items-center justify-between gap-2">
-                      <span>
-                        <img
-                  src="/images/person-f-5.webp"
-                  alt="thumb4" className="object-cover rounded-full w-10 h-10"/>
-                      </span>
-                      <span>
-                        <h3 className="text-lg text-gray-500">John Doe</h3>
-                        <p className="text-sm text-gray-600">03/15/2024</p>
-                      </span>
-                    </div>
-                    <div className="flex gap-1 mt-1">
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                    </div>
-                    </div>
-
-                  <div>
-                    <h1 className="mb-2 text-lg text-gray-500">Exceptional sound quality and comfort</h1>
-                    <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci. Phasellus egestas nisi vitae lectus imperdiet venenatis. Suspendisse vulputate quam diam, et consectetur augue condimentum in.</p>
-                  </div>
+                  </form>
                 </div>
 
-                <div className="bg-white shadow p-8 rounded-lg">
-                  <div className="flex gap-4 items-center justify-between">
-                    <div className="flex flex-row items-center justify-between gap-2">
-                      <span>
-                        <img
-                  src="/images/person-f-2.webp"
-                  alt="thumb4" className="object-cover rounded-full w-10 h-10"/>
-                      </span>
-                      <span>
-                        <h3 className="text-lg text-gray-500">Jane Smith</h3>
-                        <p className="text-sm text-gray-600">02/28/2024</p>
-                      </span>
-                    </div>
-                    <div className="flex gap-1 mt-1">
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400" size={16} />
-                    </div>
+                <div className="flex flex-col gap-6">
+                  <h1 className="text-lg text-gray-700">Customer Reviews</h1>
+                  <div className="bg-white shadow p-8 rounded-lg">
+                    <div className="flex gap-4 items-center justify-between">
+                      <div className="flex flex-row items-center justify-between gap-2">
+                        <span>
+                          <img
+                            src="/images/person-f-5.webp"
+                            alt="thumb4"
+                            className="object-cover rounded-full w-10 h-10"
+                          />
+                        </span>
+                        <span>
+                          <h3 className="text-lg text-gray-500">John Doe</h3>
+                          <p className="text-sm text-gray-600">03/15/2024</p>
+                        </span>
+                      </div>
+                      <div className="flex gap-1 mt-1">
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                      </div>
                     </div>
 
-                  <div>
-                    <h1 className="mb-2 text-lg text-gray-500">Great headphones, battery could be better</h1>
-                    <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci. Phasellus egestas nisi vitae lectus imperdiet venenatis.</p>
+                    <div>
+                      <h1 className="mb-2 text-lg text-gray-500">
+                        Exceptional sound quality and comfort
+                      </h1>
+                      <p className="text-sm text-gray-600">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum at lacus congue, suscipit elit nec, tincidunt
+                        orci. Phasellus egestas nisi vitae lectus imperdiet
+                        venenatis. Suspendisse vulputate quam diam, et
+                        consectetur augue condimentum in.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white shadow p-8 rounded-lg">
+                    <div className="flex gap-4 items-center justify-between">
+                      <div className="flex flex-row items-center justify-between gap-2">
+                        <span>
+                          <img
+                            src="/images/person-f-2.webp"
+                            alt="thumb4"
+                            className="object-cover rounded-full w-10 h-10"
+                          />
+                        </span>
+                        <span>
+                          <h3 className="text-lg text-gray-500">Jane Smith</h3>
+                          <p className="text-sm text-gray-600">02/28/2024</p>
+                        </span>
+                      </div>
+                      <div className="flex gap-1 mt-1">
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star className="text-yellow-400" size={16} />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h1 className="mb-2 text-lg text-gray-500">
+                        Great headphones, battery could be better
+                      </h1>
+                      <p className="text-sm text-gray-600">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum at lacus congue, suscipit elit nec, tincidunt
+                        orci. Phasellus egestas nisi vitae lectus imperdiet
+                        venenatis.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white shadow p-8 rounded-lg">
+                    <div className="flex gap-4 items-center justify-between">
+                      <div className="flex flex-row items-center justify-between gap-2">
+                        <span>
+                          <img
+                            src="/images/person-m-2.webp"
+                            alt="thumb4"
+                            className="object-cover rounded-full w-10 h-10"
+                          />
+                        </span>
+                        <span>
+                          <h3 className="text-lg text-gray-500">
+                            Michael Johnson
+                          </h3>
+                          <p className="text-sm text-gray-600">02/15/2024</p>
+                        </span>
+                      </div>
+                      <div className="flex gap-1 mt-1">
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <Star
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                        <BsStarHalf
+                          className="text-yellow-400 fill-amber-400"
+                          size={16}
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h1 className="mb-2 text-lg text-gray-500">
+                        Impressive noise cancellation
+                      </h1>
+                      <p className="text-sm text-gray-600">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum at lacus congue, suscipit elit nec, tincidunt
+                        orci. Phasellus egestas nisi vitae lectus imperdiet
+                        venenatis. Suspendisse vulputate quam diam.
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <div className="bg-white shadow p-8 rounded-lg">
-                  <div className="flex gap-4 items-center justify-between">
-                    <div className="flex flex-row items-center justify-between gap-2">
-                      <span>
-                        <img
-                  src="/images/person-m-2.webp"
-                  alt="thumb4" className="object-cover rounded-full w-10 h-10"/>
-                      </span>
-                      <span>
-                        <h3 className="text-lg text-gray-500">Michael Johnson</h3>
-                        <p className="text-sm text-gray-600">02/15/2024</p>
-                      </span>
-                    </div>
-                    <div className="flex gap-1 mt-1">
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <Star className="text-yellow-400 fill-amber-400" size={16} />
-                      <BsStarHalf className="text-yellow-400 fill-amber-400" size={16} />
-                    </div>
-                    </div>
-
-                  <div>
-                    <h1 className="mb-2 text-lg text-gray-500">Impressive noise cancellation</h1>
-                    <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci. Phasellus egestas nisi vitae lectus imperdiet venenatis. Suspendisse vulputate quam diam.</p>
-                  </div>
+                <div className="flex justify-center">
+                  <button className="border px-4 py-2 rounded border-blue-600 text-blue-600 font-bold bg-white hover:bg-blue-600 hover:text-white">
+                    Load More Views
+                  </button>
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <button className="border px-4 py-2 rounded border-blue-600 text-blue-600 font-bold bg-white hover:bg-blue-600 hover:text-white">Load More Views</button>
-              </div>
               </div>
             )}
           </div>

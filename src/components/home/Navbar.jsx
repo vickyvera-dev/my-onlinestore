@@ -226,48 +226,69 @@ function Navbar() {
               >
                 <X size={28} />
               </button>
-              <Link
+              {/* <NavLink
                 to="/"
                 onClick={() => setIsOpen(false)}
                 className="text-blue-600"
               >
                 Home
-              </Link>
-              <Link
+              </NavLink> */}
+
+                <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
+              >
+                  Home
+              </NavLink>
+
+              <NavLink
                 to="/about"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                About
-              </Link>
-              <Link
+                   About
+              </NavLink>
+              
+              <NavLink
                 to="/category"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                Category
-              </Link>
-              <Link
+                  Category
+              </NavLink>
+              
+              
+
+              <NavLink
                 to="/productDetails"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                Product Details
-              </Link>
-              <Link
+                  Product Details
+              </NavLink>
+             
+              <NavLink
                 to="/cart"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                Cart
-              </Link>
-              <Link
+                  Cart
+              </NavLink>
+              
+              <NavLink
                 to="/checkout"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                Checkout
-              </Link>
+                  Checkout
+              </NavLink>
               <a
                 href="#"
                 onClick={() => setIsOpen(false)}
@@ -289,13 +310,15 @@ function Navbar() {
               >
                 Megamenu 2 <ChevronDown className="w-4 h-4" />
               </a>
-              <Link
+             
+              <NavLink
                 to="/contact"
-                onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600 font-medium" : "text-gray-700 hover:text-blue-600"
+                }
               >
-                Contact
-              </Link>
+                  Contact
+              </NavLink>
             </div>
           </div>
         )}

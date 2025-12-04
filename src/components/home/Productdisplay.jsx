@@ -76,7 +76,8 @@ function Productdisplay() {
       breakpoint: 768,
       settings: { slidesToShow: 2, centerMode: false },
     },
-    {
+
+     {
       breakpoint: 640,
       settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
     },
@@ -100,15 +101,16 @@ function Productdisplay() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id} className="px-2">
+            <div key={`${item.id}`} className="px-2">
+              
               <div
                 data-aos="zoom-in"
-                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2"
+                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2"
               >
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="mx-auto w-40 h-40 object-cover mb-4 transition-transform duration-300 hover:scale-105"
+                  className="mx-auto w-40 h-40 object-cover mb-4 transition-all duration-300 hover:scale-105"
                 />
                 <h3 className="text-gray-800 font-semibold text-lg">
                   {item.name}

@@ -15,11 +15,11 @@ function OurHistory() {
   return (
     <div>
        <div className="bg-gray-100 py-4 w-full">
-              <div className="flex justify-between items-center px-10 max-w-7xl">
-                <h1 className="font-bold text-2xl text-blue-900 ml-[8%]">About</h1>
-                <div className="flex gap-2">
+              <div className="flex lg:flex-row flex-col justify-between lg:items-center px-4 max-w-7xl">
+                <h1 className="font-bold text-2xl text-blue-900 lg:ml-[8%]">About</h1>
+                <div className="flex gap-2 flex-row items-center">
                   <Link to="/" className="font-medium text-blue-600 cursor-pointer">Home</Link>
-                  <span className="font-medium text-gray-500">/ About</span>
+                  <span className="font-medium text-gray-500 flex flex-row items-center gap-2"><span>/</span> About</span>
                 </div>
               </div>
             </div>
