@@ -51,37 +51,38 @@ function Productdisplay() {
     Aos.init({ duration: 1000, delay: 50 });
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    pauseOnHover: true,
-    centerMode: true,
-    arrows: true,
-    nextArrow: <ArrowRight />,
-    prevArrow: <ArrowLeft />,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: { slidesToShow: 4, centerPadding: "20px" },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 3, centerPadding: "15px" },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 2, centerPadding: "20px" },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1, centerPadding: "30px" },
-      },
-    ],
-  };
+ const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  pauseOnHover: true,
+  centerMode: true,
+  arrows: true,
+  nextArrow: <ArrowRight />,
+  prevArrow: <ArrowLeft />,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: { slidesToShow: 4, centerPadding: "20px" },
+    },
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 3, centerPadding: "15px" },
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 2, centerMode: false },
+    },
+    {
+      breakpoint: 640,
+      settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
+    },
+  ],
+};
+
 
   return (
     <div className="bg-white w-full py-16">
