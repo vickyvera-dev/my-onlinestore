@@ -109,7 +109,7 @@ export default function ProductPage() {
         </div>
 
         {/* Main grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6  py-10 grid grid-cols-1  lg:grid-cols-[50%_50%] gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6  py-10 grid grid-cols-1  lg:grid-cols-[48%_48%] gap-8">
           {/* LEFT: Gallery */}
           <div className="space-y-4">
             <div className="rounded-lg overflow-hidden hover:border hover:border-gray-400 hover:shadow-lg transition">
@@ -487,7 +487,7 @@ export default function ProductPage() {
             {/* REVIEWS */}
             {activeSection === "Reviews (42)" && (
               <div className="space-y-6 px-4">
-                <div className="flex flex-col lg:flex-row gap-18 items-start px-4">
+                <div className="flex flex-col lg:flex-row md:flex-row gap-18 items-center w-full">
                   <div className="flex flex-col items-center space-y-2">
                     <div className="text-5xl font-bold text-blue-900">4.5</div>
                      <div className="flex gap-1 mt-1">
@@ -500,7 +500,7 @@ export default function ProductPage() {
                     <div className="text-sm text-gray-600 mt-1">Based on 42 reviews</div>
                   </div>
 
-                  <div className="flex-1 space-y-2">
+                  <div className="flex-1 space-y-2 w-full">
                     <div className="flex items-center gap-3">
                       <div className="text-sm text-gray-500 w-16">5 stars</div>
                       <div className="bg-gray-200 w-full h-2 rounded-full relative">
@@ -509,7 +509,7 @@ export default function ProductPage() {
                       <div className="w-14 text-right">27</div>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 w-full">
                       <div className="text-sm text-gray-500 w-16">4 stars</div>
                       <div className="bg-gray-200 w-full h-2 rounded-full relative">
                         <div className="absolute h-2 rounded-l-full bg-amber-400 w-[30%]" />
@@ -545,9 +545,9 @@ export default function ProductPage() {
 
                 {/* review form */}
                 <form className="space-y-4 shadow-lg rounded-lg bg-white p-8">
-                  <h1>Write a Review</h1>
+                  <h1 className="text-lg font-bold text-gray-600">Write a Review</h1>
                   <div>
-                    <p>Your Rating</p>
+                    <p className="text-sm text-gray-700">Your Rating</p>
                     <div className="flex gap-1 mt-1">
                       <Star className="text-gray-400 fill-gray-400" size={20} />
                       <Star className="text-gray-400 fill-gray-400" size={20} />

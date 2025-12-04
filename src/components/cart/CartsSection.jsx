@@ -89,7 +89,7 @@ const [showCard3, setShowCard3] = useState(true);
 <div className="flex flex-row justify-between border border-gray-300 transition-all ease-in-out duration-300 hover:border-blue-600 p-4 rounded-2xl">
   
   <div>
-    <div className="w-full mb-3 flex flex-row gap-3 py-4 items-center ml-2">
+    <div className="w-full mb-3 flex flex-col lg:flex-row gap-3 py-4 items-center ml-2">
       <div>
         <img src="/images/product-7.webp" className="w-25 h-28 object-fit pt-4 border border-gray-300 rounded-2xl" />
       </div>
@@ -114,13 +114,13 @@ const [showCard3, setShowCard3] = useState(true);
     </div>
   </div>
 
-  <div className="flex flex-row gap-8 items-center mr-4">
+  <div className="flex flex-wrap flex-row gap-8 items-center mr-4">
         
         {/* Price - does NOT change */}
         <span className="text-blue-950 font-bold">$64.99</span>
 
         {/* Quantity button */}
-        <span className="flex flex-row gap-4 items-center py-1 px-5 rounded-full border border-gray-300">
+        <span className="flex flex-row lg:gap-4 md:gap-3 gap-2  items-center py-1 l:px-5 md:px-3 px-3  rounded-full border border-gray-300">
           <button
             onClick={decreaseQtyshirt}
             className="font-medium text-gray-400 text-lg py-0.5 px-0.5 rounded-full bg-blue-50"
@@ -150,10 +150,10 @@ const [showCard3, setShowCard3] = useState(true);
 
            {/*second card*/}
         {showCard2 && (
-      <div className="flex flex-row justify-between border border-gray-300 transition-all ease-in-out duration-300 hover:border-blue-600 p-4 rounded-2xl">
+      <div className="flex  flex-row justify-between border border-gray-300 transition-all ease-in-out duration-300 hover:border-blue-600 p-4 rounded-2xl">
         
         <div>
-          <div className="w-full mb-3 flex flex-row gap-3 py-4 items-center ml-2">
+          <div className="w-full mb-3 flex flex-col lg:flex-row gap-3 py-4 items-center ml-2">
             <div>
               <img src="/images/product-2.webp" className="w-25 h-28 object-fit pt-4 border border-gray-300 rounded-2xl" />
             </div>
@@ -178,7 +178,7 @@ const [showCard3, setShowCard3] = useState(true);
           </div>
         </div>
 
-        <div className="flex flex-row gap-8 items-center mr-4">
+        <div className="flex flex-row gap-8 items-center mr-4 flex-wrap">
               
               {/* Price - does NOT change */}
               <div className="flex flex-col gap-2 ">
@@ -188,7 +188,7 @@ const [showCard3, setShowCard3] = useState(true);
               
 
               {/* Quantity button */}
-              <span className="flex flex-row gap-4 items-center py-1 px-5 rounded-full border border-gray-300">
+              <span className="flex flex-row lg:gap-4 md:gap-3 gap-2  items-center py-1 l:px-5 md:px-3 px-3 rounded-full border border-gray-300">
                 <button
                   onClick={decreaseQtychair}
                   className="font-medium text-gray-400 text-lg py-0.5 px-0.5 rounded-full bg-blue-50"
@@ -221,7 +221,7 @@ const [showCard3, setShowCard3] = useState(true);
       <div className="flex flex-row justify-between border border-gray-300 transition-all ease-in-out duration-300 hover:border-blue-600 p-4 rounded-2xl">
         
         <div>
-          <div className="w-full mb-3 flex flex-row gap-3 py-4 items-center ml-2">
+          <div className="w-full mb-3 flex flex-col lg:flex-row gap-3 py-4 items-center ml-2">
             <div>
               <img src="/images/product-3.webp" className="w-25 h-28 object-fit pt-4 border border-gray-300 rounded-2xl" />
             </div>
@@ -246,7 +246,7 @@ const [showCard3, setShowCard3] = useState(true);
           </div>
         </div>
 
-        <div className="flex flex-row gap-8 items-center mr-4">
+        <div className="flex flex-row gap-8 items-center mr-4 flex-wrap">
               
               {/* Price - does NOT change */}
               
@@ -254,7 +254,7 @@ const [showCard3, setShowCard3] = useState(true);
                 
 
               {/* Quantity button */}
-              <span className="flex flex-row gap-4 items-center py-1 px-5 rounded-full border border-gray-300">
+              <span className="flex flex-row lg:gap-4 md:gap-3 gap-2  items-center py-1 lg:px-5 md:px-3 px-3 rounded-full border border-gray-300">
                 <button
                   onClick={decreaseQty}
                   className="font-medium text-gray-400 text-lg py-0.5 px-0.5 rounded-full bg-blue-50"
@@ -284,7 +284,7 @@ const [showCard3, setShowCard3] = useState(true);
       )}
           {/*button section*/}
 
-          <div className="flex flex-row items-center justify-between pb-4">            
+          <div className="flex flex-wrap flex-row items-center justify-between pb-4">            
               <div className="w-[60%] relative">
                <input
                 type="text"
@@ -335,7 +335,7 @@ const [showCard3, setShowCard3] = useState(true);
               <div className="flex flex-row gap-2 items-center">
                  <div
                 onClick={() => setSelected(!selected)}
-                className={`w-4.5 h-4.5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
+                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
                   ${selected ? "border-blue-600 bg-blue-600" : "border-gray-400 bg-transparent"}
                 `}
               >
@@ -349,7 +349,7 @@ const [showCard3, setShowCard3] = useState(true);
               <div className="flex flex-row gap-2 items-center">                
                 <div
                 onClick={() => setSelected2(!selected2)}
-                className={`w-4.5 h-4.5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
+                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
                   ${selected2 ? "border-blue-600 bg-blue-600" : "border-gray-400 bg-transparent"}
                 `}
               >
@@ -362,7 +362,7 @@ const [showCard3, setShowCard3] = useState(true);
               <div className="flex flex-row gap-2 items-center">
                 <div
                 onClick={() => setSelected3(!selected3)}
-                className={`w-4.5 h-4.5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
+                className={`w-5 h-5 rounded-full border-2 flex items-center justify-center cursor-pointer transition-all
                   ${selected3 ? "border-blue-600 bg-blue-600" : "border-gray-400 bg-transparent"}
                 `}
               >
