@@ -54,7 +54,7 @@ function Productdisplay() {
   const settings = {
   dots: true,
   infinite: true,
-  slidesToShow: 5,       // for screens larger than 1440px
+  slidesToShow: 6,       // for screens larger than 1440px
   slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 2500,
