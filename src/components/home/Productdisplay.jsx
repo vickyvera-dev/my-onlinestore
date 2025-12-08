@@ -51,111 +51,46 @@ function Productdisplay() {
     Aos.init({ duration: 1000, delay: 50 });
   }, []);
 
-   const settings = {
-     dots: true,
+  const settings = {
+    dots: true,
     infinite: true,
-   slidesToShow: 6, // default for extra-large screens
-    slidesToScroll: 2,
+    slidesToShow: 6, // default for extra-large screens
+    slidesToScroll: 3,
     autoplay: true,
-   autoplaySpeed: 2500,
-     pauseOnHover: true,
-      centerMode: true,
-   arrows: true,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
+    // centerMode: true,
+    arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
-
-     responsive: [
+    responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-          centerMode: false,
-        }
+        breakpoint: 2560, // 4K screens
+        settings: { slidesToShow: 6, slidesToScroll: 2, centerMode: true }
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          centerMode: false,
-        }
+        breakpoint: 1920, // Full HD
+        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: true }
       },
       {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
+        breakpoint: 1440, // laptops / large tablets
+        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: false }
+      },
+      {
+        breakpoint: 1024, // tablets
+        settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
+      },
+      {
+        breakpoint: 768, // large phones / small tablets
+        settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false }
+      },
+      {
+        breakpoint: 480, // mobile
+        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false }
       }
     ]
-    // responsive: [
-    //   {
-    //      breakpoint: 2560, // 4K screens
-    //     settings: { slidesToShow: 6, slidesToScroll: 2, centerMode: true }
-    //    },
-    //  {
-    //      breakpoint: 1920, // Full HD
-    //     settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: true }
-    //   },
-    //   {
-    //   breakpoint: 1440, // laptops / large tablets
-    //    settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: false }
-    //  },
-    //  {
-    //    breakpoint: 1024, // tablets
-    //    settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
-    //  },
-    // {
-    //    breakpoint: 768, // large phones / small tablets
-    //    settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false }
-    //  },
-    //   {
-    //    breakpoint: 480, // mobile
-    //    settings: { slidesToShow: 1, slidesToScroll: 2, centerMode: false }
-    //  }
-    // ]
   };
 
-
-  // var settings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 4,
-  //   initialSlide: 0,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //         infinite: true,
-  //         dots: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //         initialSlide: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1
-  //       }
-  //     }
-  //   ]
-  // };
   return (
     <div className="bg-white w-full py-16">
       {/* Section Header */}
