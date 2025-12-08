@@ -54,8 +54,8 @@ function Productdisplay() {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 6, // default for extra-large screens
-    slidesToScroll: 3,
+    slidesToShow: 1, // default for extra-large screens
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
