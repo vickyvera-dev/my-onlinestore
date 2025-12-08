@@ -54,8 +54,8 @@ function Productdisplay() {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 1, // default for extra-large screens
-    slidesToScroll: 1,
+    slidesToShow: 6, // default for extra-large screens
+    slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
@@ -78,11 +78,11 @@ function Productdisplay() {
       },
       {
         breakpoint: 1024, // tablets
-        settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
+        settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: false }
       },
       {
         breakpoint: 768, // large phones / small tablets
-        settings: { slidesToShow: 2, slidesToScroll: 1, centerMode: false }
+        settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
       },
       {
         breakpoint: 480, // mobile
@@ -107,10 +107,11 @@ function Productdisplay() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id} className="px-1 lg:px-2 sm:px-1 md:px-3">
-              <div
+            <div key={item.id}>
+              <div  className="px-1 lg:px-2 sm:px-1 md:px-3 w-full flex justify-center">
+                <div
                 data-aos="zoom-in"
-                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2"
+                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 w-[90%] sm:w-[70%] md:w-[250px]"
               >
                 <img
                   src={item.image}
@@ -119,6 +120,7 @@ function Productdisplay() {
                 />
                 <h3 className="text-gray-800 font-semibold text-lg">{item.name}</h3>
                 <p className="text-gray-500 text-sm mt-1">{item.count} products</p>
+              </div>
               </div>
             </div>
           ))}
