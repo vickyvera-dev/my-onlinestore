@@ -6,6 +6,7 @@ import {
   BsArrowRepeat,
   BsCartPlus,
   BsCheck,
+  BsCircleFill,
   BsFillLightningFill,
   BsHeart,
   BsShieldPlus,
@@ -429,14 +430,15 @@ export default function ProductPage() {
                     </h3>
                     <div className="mt-3 space-y-2">
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
+                        {/* <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span> */}
                         <span className="text-gray-600">
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit
                         </span>
                       </p>
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           Vestibulum at lacus congue, suscipit elit nec,
                           tincidunt orci
@@ -444,7 +446,7 @@ export default function ProductPage() {
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           Phasellus egestas nisi vitae lectus imperdiet
                           venenatis
@@ -460,7 +462,7 @@ export default function ProductPage() {
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           Aenean dapibus urna eget nisi pharetra, in iaculis
                           nulla blandit
@@ -475,31 +477,31 @@ export default function ProductPage() {
                     </h3>
                     <div className="mt-3 space-y-2">
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           Lorem Ipsum Wireless Headphones
                         </span>
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                       <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">Carrying Case</span>
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           USB-C Charging Cable
                         </span>
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">3.5mm Audio Cable</span>
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">User Manual</span>
                       </p>
                     </div>

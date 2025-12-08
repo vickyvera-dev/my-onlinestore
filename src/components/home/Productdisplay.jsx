@@ -54,7 +54,7 @@ function Productdisplay() {
   const settings = {
   dots: true,
   infinite: true,
-  slidesToShow: 6,       // for screens larger than 1440px
+  slidesToShow: 5,       // for screens larger than 1440px
   slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 2500,
@@ -100,91 +100,6 @@ function Productdisplay() {
 };
 
 
-//  const settings = {
-//   dots: true,
-//   infinite: true,
-//   slidesToShow: 5,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 2500,
-//   pauseOnHover: true,
-//   centerMode: true,
-//   arrows: true,
-//   nextArrow: <ArrowRight />,
-//   prevArrow: <ArrowLeft />,
-//   responsive: [
-//        {
-//       breakpoint: 1440, // <=1440px
-//       settings: {
-//         slidesToShow: 5,
-//         slidesToScroll: 1,
-//          centerMode: false
-//       }
-//     },
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//           infinite: true,
-//           dots: true,
-//            centerMode: false
-//         }
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//           initialSlide: 2,
-//            centerMode: false
-//         }
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//            centerMode: false
-//         }
-//       }
-//     ]
-// };
-
-// var settings = {
-//     dots: true,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 4,
-//     slidesToScroll: 4,
-//     initialSlide: 0,
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 3,
-//           infinite: true,
-//           dots: true
-//         }
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//           initialSlide: 2
-//         }
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
-//     ]
-//   };
 
 
   return (
