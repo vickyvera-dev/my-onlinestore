@@ -51,56 +51,105 @@ function Productdisplay() {
     Aos.init({ duration: 1000, delay: 50 });
   }, []);
 
- const settings = {
+  const settings = {
   dots: true,
   infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+  slidesToShow: 6,       // for screens larger than 1440px
+  slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 2500,
   pauseOnHover: true,
-  centerMode: true,
+  centerMode: true,      // enabled only on large screens
   arrows: true,
   nextArrow: <ArrowRight />,
   prevArrow: <ArrowLeft />,
   responsive: [
-       {
-      breakpoint: 1440, // <=1440px
+    {
+      breakpoint: 1440,   // <=1440px
       settings: {
         slidesToShow: 5,
-        slidesToScroll: 1,
-         centerMode: false
+        slidesToScroll: 2,
+        centerMode: false
       }
     },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-           centerMode: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-           centerMode: false
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-           centerMode: false
-        }
+    {
+      breakpoint: 1024,   // <=1024px
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: false
       }
-    ]
+    },
+    {
+      breakpoint: 768,    // <=768px
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: false
+      }
+    },
+    {
+      breakpoint: 480,    // <=480px
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false
+      }
+    }
+  ]
 };
+
+
+//  const settings = {
+//   dots: true,
+//   infinite: true,
+//   slidesToShow: 5,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2500,
+//   pauseOnHover: true,
+//   centerMode: true,
+//   arrows: true,
+//   nextArrow: <ArrowRight />,
+//   prevArrow: <ArrowLeft />,
+//   responsive: [
+//        {
+//       breakpoint: 1440, // <=1440px
+//       settings: {
+//         slidesToShow: 5,
+//         slidesToScroll: 1,
+//          centerMode: false
+//       }
+//     },
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 3,
+//           slidesToScroll: 3,
+//           infinite: true,
+//           dots: true,
+//            centerMode: false
+//         }
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 2,
+//           initialSlide: 2,
+//            centerMode: false
+//         }
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//            centerMode: false
+//         }
+//       }
+//     ]
+// };
 
 // var settings = {
 //     dots: true,
@@ -154,7 +203,7 @@ function Productdisplay() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={`${item.id}`} className="px-2">
+            <div key={`${item.id}`} className="px-1 sm:px-2 md:px-3">
               
               <div
                 data-aos="zoom-in"
