@@ -46,30 +46,49 @@ function ArrowRight({ onClick }) {
 }
 
 /* -------------------- Main Component -------------------- */
-export default function Productdisplay() {
+function Productdisplay() {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 50 });
   }, []);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 6, // default for extra-large screens
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
+    // centerMode: true,
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
     responsive: [
-      { breakpoint: 2560, settings: { slidesToShow: 6, slidesToScroll: 2 } },
-      { breakpoint: 1920, settings: { slidesToShow: 5, slidesToScroll: 2 } },
-      { breakpoint: 1440, settings: { slidesToShow: 5, slidesToScroll: 2 } },
-      { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
-    ],
+      {
+        breakpoint: 2560, // 4K screens
+        settings: { slidesToShow: 6, slidesToScroll: 2, centerMode: true }
+      },
+      {
+        breakpoint: 1920, // Full HD
+        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: true }
+      },
+      {
+        breakpoint: 1440, // laptops / large tablets
+        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: false }
+      },
+      {
+        breakpoint: 1024, // tablets
+        settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: false }
+      },
+      {
+        breakpoint: 768, // large phones / small tablets
+        settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
+      },
+      {
+        breakpoint: 480, // mobile
+        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false }
+      }
+    ]
   };
 
   return (
@@ -85,11 +104,12 @@ export default function Productdisplay() {
       </div>
 
       {/* Product Carousel */}
-      <div className="lg:max-w-7xl w-full mx-auto px-4 md:px-8 relative overflow-hidden">
+      <div className="lg:max-w-7xl w-full overflow-hidden mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id} className="px-2">
-              <div
+            <div key={item.id} className="px-1 lg:px-2 sm:px-1 md:px-3">
+              <div  className=" w-full flex justify-center">
+                <div
                 data-aos="zoom-in"
                 className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 max-w-[280px] mx-auto"
               >
@@ -101,6 +121,7 @@ export default function Productdisplay() {
                 <h3 className="text-gray-800 font-semibold text-lg">{item.name}</h3>
                 <p className="text-gray-500 text-sm mt-1">{item.count} products</p>
               </div>
+              </div>
             </div>
           ))}
         </Slider>
@@ -108,3 +129,5 @@ export default function Productdisplay() {
     </div>
   );
 }
+
+export default Productdisplay;
