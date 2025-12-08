@@ -98,7 +98,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 2500,
   pauseOnHover: true,
-  centerMode: true,      // enabled only on large screens
+  //centerMode: true,      // enabled only on large screens
   arrows: true,
   nextArrow: <ArrowRight />,
   prevArrow: <ArrowLeft />,
@@ -154,7 +154,7 @@ const settings = {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id} className="px-1 lg:px-1 sm:px-2 md:px-3">
+            <div key={item.id} className="px-2 lg:px-1 sm:px-1 md:px-3">
               <div
                 data-aos="zoom-in"
                 className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2"
