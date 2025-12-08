@@ -104,11 +104,11 @@ function Productdisplay() {
       </div>
 
       {/* Product Carousel */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
+      <div className="lg:max-w-7xl w-full overflow-hidden mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id}>
-              <div  className="px-1 lg:px-2 sm:px-1 md:px-3 w-full flex justify-center">
+            <div key={item.id} className="px-1 lg:px-2 sm:px-1 md:px-3">
+              <div  className=" w-full flex justify-center">
                 <div
                 data-aos="zoom-in"
                 className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 w-[90%] sm:w-[70%] md:w-[250px]"
