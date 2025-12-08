@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-/* -------------------- Product Data -------------------- */
 const items = [
   { id: 1, name: "Ladies Wear", count: 12, image: "/images/product-f-1.webp" },
   { id: 2, name: "T-Shirt", count: 4, image: "/images/product-10.webp" },
@@ -22,7 +21,6 @@ const items = [
   { id: 12, name: "Men Fashion", count: 6, image: "/images/product-m-4.webp" },
 ];
 
-/* -------------------- Custom Arrows -------------------- */
 function ArrowLeft({ onClick }) {
   return (
     <div
@@ -45,7 +43,6 @@ function ArrowRight({ onClick }) {
   );
 }
 
-/* -------------------- Main Component -------------------- */
 function Productdisplay() {
   useEffect(() => {
     Aos.init({ duration: 1000, delay: 50 });
@@ -54,73 +51,48 @@ function Productdisplay() {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 6, // default for extra-large screens
+    slidesToShow: 6,
     slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
-    // centerMode: true,
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
     responsive: [
-      {
-        breakpoint: 2560, // 4K screens
-        settings: { slidesToShow: 6, slidesToScroll: 2, centerMode: true }
-      },
-      {
-        breakpoint: 1920, // Full HD
-        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: true }
-      },
-      {
-        breakpoint: 1440, // laptops / large tablets
-        settings: { slidesToShow: 5, slidesToScroll: 2, centerMode: false }
-      },
-      {
-        breakpoint: 1024, // tablets
-        settings: { slidesToShow: 4, slidesToScroll: 1, centerMode: false }
-      },
-      {
-        breakpoint: 768, // large phones / small tablets
-        settings: { slidesToShow: 3, slidesToScroll: 1, centerMode: false }
-      },
-      {
-        breakpoint: 480, // mobile
-        settings: { slidesToShow: 1, slidesToScroll: 1, centerMode: false }
-      }
+      { breakpoint: 2560, settings: { slidesToShow: 6, slidesToScroll: 2 } },
+      { breakpoint: 1920, settings: { slidesToShow: 5, slidesToScroll: 2 } },
+      { breakpoint: 1440, settings: { slidesToShow: 5, slidesToScroll: 2 } },
+      { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 3, slidesToScroll: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
     ]
   };
 
   return (
     <div className="bg-white w-full py-16">
-      {/* Section Header */}
       <div className="text-center mb-10 px-4">
-        <h1 className="font-bold text-blue-950 text-2xl md:text-4xl">
-          Available Products
-        </h1>
-        <p className="text-gray-500 mt-2">
-          Browse through our latest trendy collections
-        </p>
+        <h1 className="font-bold text-blue-950 text-2xl md:text-4xl">Available Products</h1>
+        <p className="text-gray-500 mt-2">Browse through our latest trendy collections</p>
       </div>
 
-      {/* Product Carousel */}
-      <div className="lg:max-w-7xl w-full overflow-x-auto mx-auto px-4 md:px-8 relative">
+      <div className="lg:max-w-7xl w-full mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id}>
-              <div  className="px-1 lg:px-2 sm:px-1 md:px-3 w-full flex justify-center items-center">
-                <div
+            <div key={item.id} className="px-2 md:px-3">
+              <div
                 data-aos="zoom-in"
-                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 w-full"
+                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm 
+                hover:shadow-md transition-all duration-500 ease-in-out 
+                hover:-translate-y-2 max-w-[260px] w-full mx-auto"
               >
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="mx-auto w-40 h-40 object-cover mb-4 transition-all duration-300 hover:scale-105"
+                  className="mx-auto w-36 h-36 object-cover mb-4 transition-all duration-300 hover:scale-105"
                 />
                 <h3 className="text-gray-800 font-semibold text-lg">{item.name}</h3>
                 <p className="text-gray-500 text-sm mt-1">{item.count} products</p>
-              </div>
               </div>
             </div>
           ))}
