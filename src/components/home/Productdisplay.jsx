@@ -111,7 +111,7 @@ function Productdisplay() {
               <div  className=" w-full flex justify-center">
                 <div
                 data-aos="zoom-in"
-                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 max-w-[180px] mx-auto"
+                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 max-w-[300px] mx-auto"
               >
                 <img
                   src={item.image}
