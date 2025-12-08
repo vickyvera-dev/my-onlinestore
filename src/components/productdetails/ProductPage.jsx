@@ -454,7 +454,7 @@ export default function ProductPage() {
                       </p>
 
                       <p className="flex items-start gap-3">
-                        <span className="w-2 h-2 bg-gray-800 rounded-full mt-2"></span>
+                        <BsCircleFill size={8}  className="mt-2 text-gray-800"/>
                         <span className="text-gray-600">
                           Suspendisse vulputate quam diam, et consectetur augue
                           condimentum in
