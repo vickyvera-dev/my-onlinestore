@@ -59,7 +59,7 @@ function Productdisplay() {
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
-    centerMode: true,
+    // centerMode: true,
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
