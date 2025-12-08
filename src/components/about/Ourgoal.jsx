@@ -13,7 +13,7 @@ function Ourgoal() {
 
   return (
     <div className="bg-white py-12 w-full">
-      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
         
         {/* Goal 1 */}
         <a href="#" className="flex flex-col items-start p-6 bg-gray-100 rounded-xl group">

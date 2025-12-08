@@ -184,7 +184,7 @@ import "aos/dist/aos.css";
 
       {/* View All Products Button */}
       <div
-        className="flex gap-4 items-center justify-center flex-col mt-20 bg-white"
+        className="flex gap-4 items-center justify-center flex-col mt-20 bg-white pb-4"
         data-aos="zoom-in"
       >
         <button className="bg-blue-600 py-2 px-8 rounded-full text-sm text-white font-medium">
