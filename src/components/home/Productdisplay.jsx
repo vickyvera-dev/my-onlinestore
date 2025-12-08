@@ -104,28 +104,29 @@ function Productdisplay() {
       </div>
 
       {/* Product Carousel */}
-      <div className="lg:max-w-7xl w-full overflow-hidden mx-auto px-4 md:px-8 relative">
-        <Slider {...settings}>
-          {items.map((item) => (
-            <div key={item.id} className="px-1 lg:px-2 sm:px-1 md:px-3">
-              <div  className=" w-full flex justify-center">
-                <div
-                data-aos="zoom-in"
-                className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-500 ease-in-out hover:-translate-y-2 max-w-[300px] mx-auto"
-              >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="mx-auto w-40 h-40 object-cover mb-4 transition-all duration-300 hover:scale-105"
-                />
-                <h3 className="text-gray-800 font-semibold text-lg">{item.name}</h3>
-                <p className="text-gray-500 text-sm mt-1">{item.count} products</p>
-              </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+     <div className="lg:max-w-7xl w-full overflow-hidden mx-auto px-4 md:px-8 relative">
+  <Slider {...settings}>
+    {items.map((item) => (
+      <div key={item.id} className="px-2 md:px-3">
+        <div
+          data-aos="zoom-in"
+          className="bg-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md 
+          transition-all duration-500 ease-in-out hover:-translate-y-2 
+          max-w-[300px] mx-auto"
+        >
+          <img
+            src={item.image}
+            alt={item.name}
+            className="mx-auto w-40 h-40 object-cover mb-4 transition-all duration-300 hover:scale-105"
+          />
+          <h3 className="text-gray-800 font-semibold text-lg">{item.name}</h3>
+          <p className="text-gray-500 text-sm mt-1">{item.count} products</p>
+        </div>
       </div>
+    ))}
+  </Slider>
+</div>
+
     </div>
   );
 }
