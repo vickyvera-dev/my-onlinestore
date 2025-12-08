@@ -247,43 +247,50 @@ import { GoShieldLock } from "react-icons/go";
             data-aos="fade-left"
           >
             {/* Section Tabs */}
-            <div className="flex gap-2 mb-3 flex-wrap w-full">
-              <button
-                onClick={() => setActiveSection("Credit / Debit Card")}
-                className={`px-8 py-6 text-sm font-medium rounded-2xl border flex items-center flex-col gap-2 ${
-                  activeSection === "Credit / Debit Card"
-                    ? "bg-blue-100 text-blue border-blue-600"
-                    : "bg-white text-gray-700 border-gray-600"
-                }`}
-              >  
-              <BsCreditCard2Front size={28} className='text-blue-600'/>             
-                Credit / Debit Card
-              </button>
+            <div className="flex lg:flex-row flex-col gap-2 mb-3 flex-wrap w-full">
+  {/* Credit / Debit */}
+  <button
+    onClick={() => setActiveSection("Credit / Debit Card")}
+    className={`flex-1 min-w-[30%] px-6 py-6 text-sm font-medium rounded-2xl 
+      border flex items-center flex-col gap-2 
+      ${activeSection === "Credit / Debit Card"
+        ? "bg-blue-100 text-blue border-blue-600"
+        : "bg-white text-gray-700 border-gray-600"
+      }`}
+  >
+    <BsCreditCard2Front size={28} className="text-blue-600" />
+    Credit / Debit Card
+  </button>
 
-              <button
-                onClick={() => setActiveSection("PayPal")}
-                className={`px-18 py-6 text-sm font-medium rounded-2xl border flex items-center flex-col gap-2 ${
-                  activeSection === "PayPal"
-                    ? "bg-blue-100 text-blue border-blue-600"
-                    : "bg-white text-gray-700 border-gray-600"
-                }`}
-              >
-                <BsPaypal size={28} className='text-blue-600'/>
-                PayPal
-              </button>
+  {/* PayPal */}
+  <button
+    onClick={() => setActiveSection("PayPal")}
+    className={`flex-1 min-w-[30%] px-6 py-6 text-sm font-medium rounded-2xl 
+      border flex items-center flex-col gap-2 
+      ${activeSection === "PayPal"
+        ? "bg-blue-100 text-blue border-blue-600"
+        : "bg-white text-gray-700 border-gray-600"
+      }`}
+  >
+    <BsPaypal size={28} className="text-blue-600" />
+    PayPal
+  </button>
 
-              <button
-                onClick={() => setActiveSection("Apple Pay")}
-                className={`px-15 py-6 text-sm font-medium rounded-2xl border flex items-center flex-col gap-2 ${
-                  activeSection === "Apple Pay"
-                    ? "bg-blue-100 text-blue border-blue-600"
-                    : "bg-white text-gray-700 border-gray-600"
-                }`}
-              >
-                <SiApple size={28} className='text-blue-600'/>
-                Apple Pay
-              </button>
-            </div>
+  {/* Apple Pay */}
+  <button
+    onClick={() => setActiveSection("Apple Pay")}
+    className={`flex-1 min-w-[30%] px-6 py-6 text-sm font-medium rounded-2xl 
+      border flex items-center flex-col gap-2 
+      ${activeSection === "Apple Pay"
+        ? "bg-blue-100 text-blue border-blue-600"
+        : "bg-white text-gray-700 border-gray-600"
+      }`}
+  >
+    <SiApple size={28} className="text-blue-600" />
+    Apple Pay
+  </button>
+</div>
+
 
             {/* === Hidden Sections === */}
             <div className="relative mt-2 w-full">
