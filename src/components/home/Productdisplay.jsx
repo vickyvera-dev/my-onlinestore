@@ -114,7 +114,7 @@ function Productdisplay() {
         <p className="text-gray-500 mt-2">Browse through our latest trendy collections</p>
       </div>
 
-      <div className="lg:max-w-7xl w-full mx-auto px-4 md:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
         <Slider {...settings}>
           {items.map((item) => (
             <div key={item.id} className="px-2 md:px-3">
